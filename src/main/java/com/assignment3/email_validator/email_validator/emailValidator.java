@@ -5,10 +5,9 @@ public class emailValidator {
 	/**
 	 * This method returns true if the input string has a single '@' character.
 	 * @param email string to test
-	 * @return true the string has a single '@' character
+	 * @return 1 if the string has a single '@' character and 0 otherwise
 	 */
 	public int validateAtSign(String email) {
-		// TODO Auto-generated method stub
 		if ( Pattern.matches("^[^@]*@[^@]*", email) )
 			return 1;
 		else return 0;
@@ -16,7 +15,7 @@ public class emailValidator {
 	/**
 	 * This method returns true if the string input string has at least one '.' character.
 	 * @param email string to test
-	 * @return true if the string has at least one '.' character
+	 * @return 1 if the string has at least one '.' character and 0 otherwise
 	 */
 	public int validateDotSign(String email) {
 		
@@ -24,7 +23,11 @@ public class emailValidator {
 			return 1;
 		else return 0;
 	}
-	
+	/**
+	 * This method returns true if the string input string has at least one '.' character.
+	 * @param email string to test
+	 * @return the number of tests passed
+	 */
 	public int validateStage1(String email) {
 		int count = 0;
 		count += validateAtSign(email);

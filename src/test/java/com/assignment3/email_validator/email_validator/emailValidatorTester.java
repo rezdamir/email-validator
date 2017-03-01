@@ -19,6 +19,7 @@ public class emailValidatorTester {
 		String email = "1234@abc.com";
 		assertEquals("1234@abc.com should return true", 1, ev.validateAtSign(email) );
 	}
+	
 	@Test
 	public void testDotSign() {
 		String email = "a.b@c.d";
